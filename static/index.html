@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coiffure de Luxe & Massage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar" class="luxury-bg">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" rx="10" fill="#000000"/>
+                    <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" fill="#d4af37"/>
+                    <circle cx="35" cy="35" r="5" fill="#000000"/>
+                    <circle cx="65" cy="35" r="5" fill="#000000"/>
+                    <path d="M30 50 Q50 40 70 50" stroke="#000000" stroke-width="3" fill="none"/>
+                </svg>
+                <span>Coiffure de Luxe & Massage</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showPage('home')">Accueil</a></li>
+                <li><a href="#services" onclick="showPage('services')">Services</a></li>
+                <li><a href="#about" onclick="showPage('about')">À propos</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+            <button id="lang-toggle" onclick="toggleLanguage()">العربية</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1 id="hero-title">Votre beauté, notre expertise à domicile</h1>
+                <a href="#contact" onclick="showPage('contact')" class="btn">Réserver maintenant</a>
+            </div>
+        </section>
+
+        <section id="services" class="page">
+            <div class="container">
+                <h1 id="services-title">Nos Services</h1>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h2 id="service1-title">Coiffure à domicile</h2>
+                        <p id="service1-desc">Service professionnel de coiffure directement chez vous.</p>
+                    </div>
+                    <div class="service-card">
+                        <h2 id="service2-title">Massage relaxant</h2>
+                        <p id="service2-desc">Massages thérapeutiques pour votre bien-être.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page">
+            <div class="container">
+                <h1 id="about-title">À propos de nous</h1>
+                <p id="about-text">Mohamed Fathallah, propriétaire de Coiffure de Luxe & Massage, offre des services premium de coiffure et de massage à domicile à Bouskoura, Maroc. Notre expertise garantit une expérience de beauté exceptionnelle dans le confort de votre foyer.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container">
+                <h1 id="contact-title">Contactez-nous</h1>
+                <form id="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" id="name" placeholder="Nom" required>
+                    <input type="tel" id="phone" placeholder="Téléphone" required>
+                    <textarea id="message" placeholder="Message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+                <a href="https://wa.me/212621294967?text=Bonjour%20je%20souhaite%20réserver" target="_blank" class="whatsapp-link">Contacter via WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-bg">
+        <div class="container">
+            <p id="footer-address">Bouskoura, Maroc</p>
+            <p><a href="tel:0621294967" class="gold-text">0621294967</a></p>
+            <p id="footer-social">Réseaux sociaux</p>
+            <div class="social-icons">
+                <span>FB</span>
+                <span>IG</span>
+                <span>WA</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
