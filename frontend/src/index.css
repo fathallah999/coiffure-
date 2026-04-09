@@ -36,3 +36,18 @@ body {
 .animate-fade-in {
   animation: fadeIn 1s ease-out;
 }
+
+/* RTL support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .space-x-6 > * + * {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+.rtl .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}

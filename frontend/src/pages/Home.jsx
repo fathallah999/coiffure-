@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LanguageContext } from '../App';
 
@@ -17,9 +17,11 @@ const Home = () => {
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-center luxury-bg text-off-white">
-      {/* Placeholder for banner image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-deep-black to-gray-800 opacity-50"></div>
+    <div className="relative h-screen flex items-center justify-center text-off-white" style={{
+      background: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080/000000/ffffff?text=Luxe+Background')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
       <div className="relative z-10 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-8 gold-text animate-fade-in">
           {content[language].title}

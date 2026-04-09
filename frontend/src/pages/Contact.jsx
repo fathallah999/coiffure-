@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { LanguageContext } from '../App';
 
 const Contact = () => {
@@ -9,22 +9,11 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Send to backend
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        alert(language === 'fr' ? 'Message envoyé!' : 'تم إرسال الرسالة!');
-        setFormData({ name: '', phone: '', message: '' });
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
+    // Simple alert for demo (in real app, send to server)
+    alert(language === 'fr' ? 'Message envoyé!' : 'تم إرسال الرسالة!');
+    setFormData({ name: '', phone: '', message: '' });
   };
 
   const content = {

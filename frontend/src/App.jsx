@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -15,7 +15,7 @@ function App() {
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       <Router>
-        <div className={`min-h-screen ${language === 'ar' ? 'rtl' : 'ltr'}`}>
+        <div className={`min-h-screen ${language === 'ar' ? 'rtl' : ''}`}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

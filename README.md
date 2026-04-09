@@ -1,53 +1,43 @@
 # Coiffure de Luxe & Massage
 
-Application web professionnelle pour un service de coiffure à domicile.
+Application web React professionnelle pour un service de coiffure à domicile.
 
 ## Structure du projet
 
 ```
 projet coiffure/
 ├── frontend/          # React + Vite + TailwindCSS
-├── backend/           # FastAPI (Python)
-└── static/            # Version HTML/CSS/JS statique
+└── README.md
 ```
 
-## Versions disponibles
+## Installation et exécution
 
-### 1. Version statique (HTML/CSS/JS)
-Pour voir le site immédiatement sans installation :
-- Ouvrez `static/index.html` dans votre navigateur web
-- Fonctionnalités complètes : navigation, langues, formulaire (simulation)
-
-### 2. Version React (avec backend)
-Pour une version complète avec API :
-
-#### Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python main.py
-```
-
-#### Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
+L'application sera disponible sur http://localhost:5173/
+
 ## Fonctionnalités
 
 - ✅ Design luxe (noir, doré, blanc cassé) avec animations
 - ✅ Interface bilingue Français/Arabe avec switch langue dynamique
 - ✅ RTL complet pour l'arabe
-- ✅ Pages : Accueil, Services, À propos, Contact
-- ✅ Formulaire de contact (simulation en statique, API en React)
+- ✅ Navigation React Router : Accueil, Services, À propos, Contact
+- ✅ Formulaire de contact avec simulation d'envoi
 - ✅ Bouton WhatsApp intégré
 - ✅ Logo SVG simple et élégant
 - ✅ Responsive design
-- ✅ Code propre et commenté
+- ✅ Code propre et modulaire
 
 ## Technologies utilisées
+
+- **Frontend**: React 18, Vite, TailwindCSS, React Router
+- **Langages**: JavaScript (ES6+), JSX
+- **Styling**: TailwindCSS avec classes personnalisées
+- **Internationalisation**: Context API pour la gestion des langues
 
 - **Frontend React**: React, Vite, TailwindCSS, React Router
 - **Backend**: FastAPI, Python
