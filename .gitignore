@@ -1,0 +1,15 @@
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# Frontend production build
+dist/
+frontend/dist/
+
+# Environment files
+.env
+*.env
+
+# Editor directories and files
+.vscode/
+.DS_Store
